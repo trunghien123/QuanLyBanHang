@@ -1,0 +1,94 @@
+@model IEnumerable< BanHang.Models.Invoice>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Start Bradcaump area -->
+<div class="ht__bradcaump__area"
+    style="background: rgba(0, 0, 0, 0) url(../../images/bg/bannerdetail.png) no-repeat scroll center center / cover ;">
+    <div class="ht__bradcaump__wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="bradcaump__inner">
+                        <nav class="bradcaump-inner">
+                            <a class="breadcrumb-item" asp-controller="Home" asp-action="Index">Home</a>
+                            <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
+                            <span class="breadcrumb-item active">Lịch sử mua hàng</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+<!-- cart-main-area start -->
+<div class="cart-main-area ptb--100 bg__white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="table-content table-responsive">
+                        @if (Model != null)
+                        {
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="product-name">Tên đơn hàng</th>
+                                        <th class="product-price">Tổng tiền</th>
+                                        <th class="product-quantity">Ngày mua</th>
+                                        <th class="product-subtotal">Tình trạng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td class="product-name"><a href="javascript:void(0)">@item.InvoiceName</a>
+                                            </td>
+                                            <td class="product-subtotal">@Int32.Parse(item.TotalMoney).ToString("N0") ₫</td>
+                                            <td class="product-remove">
+                                                @item.CreatedDate
+                                            </td>
+                                            <td class="product-remove" style="color: green; font-weight:bold">
+                                                Đang xử lý
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <div class="alert alert-success">
+                                <p>Không có sản phẩm trong giỏ hàng</p>
+                            </div>
+                        }
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- cart-main-area end -->
+<!-- Start Brand Area -->
+<div class="htc__brand__area bg__cat--4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ht__brand__inner">
+                    <ul class="brand__list owl-carousel clearfix">
+                        <li><a href="#"><img src="../../images/brand/1.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/2.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/3.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/4.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/5.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/5.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/1.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/2.png" alt="brand images"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Brand Area -->
+

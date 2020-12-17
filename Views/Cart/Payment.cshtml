@@ -1,0 +1,172 @@
+@model List<BanHang.Models.CartItem>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Start Bradcaump area -->
+<div class="ht__bradcaump__area"
+    style="background: rgba(0, 0, 0, 0) url(../../images/bg/bannerdetail.png) no-repeat scroll center center / cover ;">
+    <div class="ht__bradcaump__wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="bradcaump__inner">
+                        <nav class="bradcaump-inner">
+                            <a class="breadcrumb-item" asp-controller="Home" asp-action="Index">Home</a>
+                            <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
+                            <span class="breadcrumb-item active">Giỏ hàng</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+<!-- cart-main-area start -->
+<div class="cart-main-area ptb--100 bg__white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                    @{double totalPriceOrder = 0;}
+                    @if (Model.Count > 0)
+                    {
+                    <div class="table-content table-responsive">
+                        
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="product-thumbnail">Hình ảnh</th>
+                                        <th class="product-name">Tên sản phẩm</th>
+                                        <th class="product-price">Giá</th>
+                                        <th class="product-quantity">Số lượng</th>
+                                        <th class="product-subtotal">Tổng</th>
+                                        <th class="product-remove">Xóa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        double priceParse  = Int32.Parse(item.Product.Price) * item.Quantity;
+                                        totalPriceOrder += priceParse;
+
+                                        if(@item.Product != null){
+                                        string txt_class = "quantity_"+ item.Product.Id;
+                                        <tr>
+                                            <td class="product-thumbnail"><a asp-controller="Home" asp-action="ProductDetails"
+                                                    asp-route-id="@item.Product.Id"><img
+                                                        src="../../images/product-2/cart-img/laptop.jpg"
+                                                        alt="product img" /></a></td>
+                                            <td class="product-name"><a asp-controller="Home" asp-action="ProductDetails"
+                                                    asp-route-id="@item.Product.Id">@item.Product.ProductName</a>
+                                                @* <ul class="pro__prize">
+                                                    <li class="old__prize">$82.5</li>
+                                                    <li>$75.2</li>
+                                                    </ul> *@
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="amount">
+                                                    @{
+                                                        int price = Int32.Parse(item.Product.Price);
+                                                    } @price.ToString("N0") ₫
+                                                </span>
+                                            </td>
+                                            <td class="product-quantity"><input type="number" data-id="@item.Product.Id" class="@txt_class txtQuantity" 
+                                                    value="@item.Quantity" min="1" />
+                                            </td>
+                                            <td class="product-subtotal">@{double totalProduct = price*item.Quantity;} @totalProduct.ToString("N0") ₫</td>
+                                            <td class="product-remove">
+                                                <a asp-action="deleteCart" asp-route-id="@item.Product.Id"><i class="icon-trash icons"></i></a>
+                                            </td>
+                                        </tr>
+                                        }
+                                        if(@item.Combo != null){
+                                            string txt_class = "quantity_"+ item.Combo.Id;
+                                        <tr>
+                                            <td class="product-thumbnail"><a asp-controller="Home" asp-action="ComboDetails"
+                                                    asp-route-id="@item.Combo.Id"><img
+                                                        src="../../images/product-2/cart-img/combo.jpg"
+                                                        alt="product img" /></a></td>
+                                            <td class="product-name"><a asp-controller="Home" asp-action="ComboDetails"
+                                                    asp-route-id="@item.Combo.Id">@item.Combo.ComboName</a>
+                                                @* <ul class="pro__prize">
+                                                    <li class="old__prize">$82.5</li>
+                                                    <li>$75.2</li>
+                                                    </ul> *@
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="amount">
+                                                    @{
+                                                        int discountMoney = Int32.Parse(item.Combo.DiscountMoney);
+                                                    } @discountMoney.ToString("N0") ₫
+                                                </span>
+                                            </td>
+                                            <td class="product-quantity"><input type="number" data-id="@item.Combo.Id" class="@txt_class txtQuantity" 
+                                                    value="@item.Quantity" min="1" />
+                                            </td>
+                                            <td class="product-subtotal">@{ double total = discountMoney * item.Quantity;} @total.ToString("N0") ₫</td>
+                                            <td class="product-remove">
+                                                <a asp-action="deleteCart" asp-route-id="@item.Combo.Id"><i class="icon-trash icons"></i></a>
+                                            </td>
+                                        </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        
+                    </div>
+                    <form method="post" asp-controller="Cart" asp-action="PaymentOrder">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
+                                <div class="section group">
+                                    
+                                        <div class="form-group">
+                                            <label>Địa chỉ giao hàng</label>
+                                            <input name="address" class="form-control" required/>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 smt-40 xmt-40">
+                                <div class="htc__cart__total">
+                                    <ul class="payment__btn">
+                                        <li class="active"><button type="submit" class="btn btn-success btnOrder">Đặt hàng</button></li>
+                                        <li><a asp-controller="Products" asp-action="Index">Tiếp tục mua hàng</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    }
+                    else
+                    {
+                        <div class="alert alert-success">
+                            <p>Không có sản phẩm trong giỏ hàng</p>
+                        </div>
+                    }
+            </div>
+        </div>
+    </div>
+</div>
+<!-- cart-main-area end -->
+<!-- Start Brand Area -->
+<div class="htc__brand__area bg__cat--4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ht__brand__inner">
+                    <ul class="brand__list owl-carousel clearfix">
+                        <li><a href="#"><img src="../../images/brand/1.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/2.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/3.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/4.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/5.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/5.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/1.png" alt="brand images"></a></li>
+                        <li><a href="#"><img src="../../images/brand/2.png" alt="brand images"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Brand Area -->
+
