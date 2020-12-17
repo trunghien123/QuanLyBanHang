@@ -167,9 +167,15 @@ namespace BanHang.Controllers
                 {
                     foreach (var item in list)
                     {
-                        if (item.Product.Id == id)
+                        if (item.Product != null)
                         {
-                            item.Quantity = quantity;
+                            if(item.Product.Id == id){
+                                item.Quantity = quantity;
+                            } else if(item.Combo != null){
+                                if(item.Combo.Id == id){
+                                    item.Quantity = quantity;
+                                }
+                            }
                         } 
                         else if(item.Combo.Id == id){
                             item.Quantity = quantity;
