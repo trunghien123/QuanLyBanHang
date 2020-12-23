@@ -1,0 +1,61 @@
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\obj\Debug\GUI.MainForm.resources
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\bin\Debug\GUI.exe.config
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\bin\Debug\GUI.exe
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\bin\Debug\GUI.pdb
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\bin\Debug\BUS.dll
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\bin\Debug\DTO.dll
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\bin\Debug\BUS.pdb
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\bin\Debug\DTO.pdb
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\obj\Debug\GUI.exe
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\obj\Debug\GUI.pdb
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\bin\Debug\DAL.dll
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\bin\Debug\DAL.pdb
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\obj\Debug\GUI.ThemSanPhamForm.resources
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\obj\Debug\GUI.ThemHoaDonForm.resources
+C:\Users\HAO\source\repos\AdminBanHangDienTu\GUI\obj\Debug\GUI.ThemChiTietHoaDonForm.resources
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\bin\Debug\GUI.exe.config
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\bin\Debug\GUI.exe
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\bin\Debug\GUI.pdb
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\bin\Debug\BUS.dll
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\bin\Debug\DTO.dll
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\bin\Debug\DAL.dll
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\bin\Debug\BUS.pdb
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\bin\Debug\DTO.pdb
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\bin\Debug\DAL.pdb
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\obj\Debug\GUI.MainForm.resources
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\obj\Debug\GUI.ThemChiTietHoaDonForm.resources
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\obj\Debug\GUI.ThemHoaDonForm.resources
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\obj\Debug\GUI.ThemSanPhamForm.resources
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\obj\Debug\GUI.exe
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\GUI\obj\Debug\GUI.pdb
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\bin\Debug\GUI.exe.config
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\bin\Debug\GUI.exe
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\bin\Debug\GUI.pdb
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\bin\Debug\BUS.dll
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\bin\Debug\DTO.dll
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\bin\Debug\DAL.dll
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\bin\Debug\BUS.pdb
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\bin\Debug\DTO.pdb
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\bin\Debug\DAL.pdb
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.MainForm.resources
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.ThemChiTietHoaDonForm.resources
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.ThemHoaDonForm.resources
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.ThemSanPhamForm.resources
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.exe
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.pdb
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\GUI\obj\Debug\GUI.Form1.resources

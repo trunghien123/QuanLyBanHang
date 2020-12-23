@@ -1,0 +1,27 @@
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DAL\bin\Debug\DAL.dll
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DAL\bin\Debug\DAL.pdb
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DAL\bin\Debug\DTO.dll
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DAL\bin\Debug\DTO.pdb
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DAL\obj\Debug\DAL.dll
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DAL\obj\Debug\DAL.pdb
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\DAL\bin\Debug\DAL.dll
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\DAL\bin\Debug\DAL.pdb
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\DAL\bin\Debug\DTO.dll
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\DAL\bin\Debug\DTO.pdb
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\DAL\obj\Debug\DAL.dll
+C:\Users\AMIT GROUP\Desktop\AdminBanHangDienTu\DAL\obj\Debug\DAL.pdb
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\bin\Debug\DAL.dll
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\bin\Debug\DAL.pdb
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\bin\Debug\DTO.dll
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\bin\Debug\DTO.pdb
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\obj\Debug\DAL.dll
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\obj\Debug\DAL.pdb

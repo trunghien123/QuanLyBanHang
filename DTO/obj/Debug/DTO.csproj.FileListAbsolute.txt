@@ -1,0 +1,12 @@
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DTO\bin\Debug\DTO.dll
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DTO\bin\Debug\DTO.pdb
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DTO\obj\Debug\DTO.dll
+C:\Users\HAO\source\repos\AdminBanHangDienTu\DTO\obj\Debug\DTO.pdb
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DTO\bin\Debug\DTO.dll
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DTO\bin\Debug\DTO.pdb
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DTO\obj\Debug\DTO.dll
+D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DTO\obj\Debug\DTO.pdb
