@@ -79,7 +79,9 @@ namespace GUI
         //sua button
         private void suaSP(object sender, EventArgs e)
         {
-            if(!textBoxID.Text.Equals("") && !textBoxTenSP.Text.Equals("") && !textBoxSoLuong.Text.Equals("") && !textBoxGia.Text.Equals("") && !textBoxDetail.Text.Equals("") && textBoxSoLuong.Text.All(char.IsDigit) && textBoxGia.Text.All(char.IsDigit))
+            if(!textBoxID.Text.Equals("") && !textBoxTenSP.Text.Equals("") && !textBoxSoLuong.Text.Equals("") 
+                && !textBoxGia.Text.Equals("") && !textBoxDetail.Text.Equals("") && textBoxSoLuong.Text.All(char.IsDigit)
+                && textBoxGia.Text.All(char.IsDigit))
             {
                 BUS_Product product = new BUS_Product();
                 BUS_ProductDetail productDetail = new BUS_ProductDetail();
@@ -146,6 +148,43 @@ namespace GUI
                 arr[6] = comboList[i].Discount;
 
                 listViewCombo.Items.Add(new ListViewItem(arr));
+            }
+        }
+
+        //setting thông tin combo
+        private void thongtinCombo(object sender, MouseEventArgs e)
+        {
+            textBoxCBID.Text = listViewCombo.SelectedItems[0].SubItems[0].Text;
+            textBoxCBName.Text = listViewCombo.SelectedItems[0].SubItems[1].Text;
+            textBoxCBstart.Text = listViewCombo.SelectedItems[0].SubItems[3].Text;
+            textBoxCBend.Text = listViewCombo.SelectedItems[0].SubItems[4].Text;
+            textBoxCBPrice.Text = listViewCombo.SelectedItems[0].SubItems[5].Text;
+            discountCB.Text = listViewCombo.SelectedItems[0].SubItems[6].Text;
+        }
+
+
+        private void suaCombo(object sender, EventArgs e)
+        {
+            if(!textBoxCBID.Text.Equals("") && !textBoxCBName.Text.Equals("") && !textBoxCBstart.Text.Equals("") && !textBoxCBend.Text.Equals("") && !textBoxCBPrice.Text.Equals("") && !discountCB.Text.Equals(""))
+            {
+                BUS_Combo combo = new BUS_Combo();
+                double discountMoneyInt = Int32.Parse(textBoxCBPrice.Text) - (Int32.Parse(textBoxCBPrice.Text) * Int32.Parse(discountCB.Text)) / 100;
+                string discountMoney = discountMoneyInt.ToString();
+                Combo comboDTO = new Combo(textBoxCBID.Text, textBoxCBName.Text,"", textBoxCBstart.Text, textBoxCBend.Text, textBoxCBPrice.Text, discountCB.Text, discountMoney);
+                combo.updateCombo(comboDTO);
+
+                setting_DSCB();
+            }
+        }
+
+        private void xoaCombo(object sender, EventArgs e)
+        {
+            if (!textBoxCBID.Text.Equals(""))
+            {
+                BUS_Combo combo = new BUS_Combo();
+                combo.deleteCombo(textBoxCBID.Text);
+
+                setting_DSCB();
             }
         }
 
@@ -431,17 +470,15 @@ namespace GUI
 
         }
 
-        private void listViewDSSP_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonAddCombo_Click(object sender, EventArgs e)
         {
-            Form1 themComboForm = new Form1();
-            themComboForm.formCalled = this;
-            themComboForm.Show();
+            
         }
+
+        
+
+
+
 
 
         //---------------------------------------------------Hết button chi tiết hóa đơn-----------------------------------------------------------

@@ -50,10 +50,34 @@ namespace DAL
                 SqlDataAdapter da = new SqlDataAdapter();
                 con.Open();
                 da.InsertCommand = con.CreateCommand();
-                da.InsertCommand.CommandText = "insert into combo (id, combo_name, product_list, startDate, endDate, totalMoney, discount, discountMoney) values ('" + combo.ID + "', N'" + combo.Combo_Name + "', '" + combo.Product_List + "', " + combo.StartDate + ", '" + combo.EndDate + "', '" + combo.ToTalMoney + "', '" + combo.Discount + "', '" + combo.DiscountMoney + "')";
+                double discountMoneyInt = Int32.Parse(combo.ToTalMoney) - (Int32.Parse(combo.ToTalMoney) * Int32.Parse(combo.Discount)) / 100;
+                string discountMoney = discountMoneyInt.ToString();
+                da.InsertCommand.CommandText = "insert into combo (id, combo_name, product_list, startDate, endDate, totalMoney, discount, discountMoney) values ('" + combo.ID + "', N'" + combo.Combo_Name + "', '" + combo.Product_List + "', '" + combo.StartDate + "', '" + combo.EndDate + "', '" + combo.ToTalMoney + "', '" + combo.Discount + "', '" + discountMoney + "')";
                 da.InsertCommand.ExecuteNonQuery();
                 con.Close();
             }
+        }
+        //Update Combo
+        public void updateCombo(Combo combo)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            con.Open();
+            da.UpdateCommand = con.CreateCommand();
+            double discountMoneyInt = Int32.Parse(combo.ToTalMoney) - (Int32.Parse(combo.ToTalMoney) * Int32.Parse(combo.Discount)) / 100;
+            string discountMoney = discountMoneyInt.ToString();
+            da.UpdateCommand.CommandText = "update combo set Combo_Name=N'" + combo.Combo_Name + "', product_list='" + combo.Product_List + "', startDate='" + combo.StartDate + "', endDate='" + combo.EndDate + "', totalMoney='" + combo.ToTalMoney + "', discount='" + combo.Discount + "', discountMoney='" + discountMoney + "' where id='" + combo.ID + "'";
+            da.UpdateCommand.ExecuteNonQuery();
+            con.Close();
+        }
+        //Delete
+        public void deleteCombowithId(String id)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            con.Open();
+            da.DeleteCommand = con.CreateCommand();
+            da.DeleteCommand.CommandText = "delete from Combo where id='" + id + "'";
+            da.DeleteCommand.ExecuteNonQuery();
+            con.Close();
         }
     }
 }

@@ -25,3 +25,12 @@ D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\obj\Debug\DAL.csproj.CoreC
 D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\obj\Debug\DAL.dll
 D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\DAL\obj\Debug\DAL.pdb
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\bin\Debug\DAL.dll
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\bin\Debug\DAL.pdb
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\bin\Debug\DTO.dll
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\bin\Debug\DTO.pdb
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.dll
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.pdb

@@ -81,5 +81,17 @@ namespace BUS
         {
             combo.addCombo(comboDTO);
         }
+
+        //sửa sản phẩm
+        public void updateCombo(Combo comboDTO)
+        {
+            combo.updateCombo(comboDTO);
+        }
+
+        //xóa sản phẩm theo id
+        public void deleteCombo(String id)
+        {
+            combo.deleteCombowithId(id);
+        }
     }
 }

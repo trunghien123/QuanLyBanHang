@@ -62,17 +62,17 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageCombo = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxCBend = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonAddCombo = new System.Windows.Forms.Button();
             this.buttonDelCombo = new System.Windows.Forms.Button();
             this.buttonUpCombo = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.discount = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.discountCB = new System.Windows.Forms.TextBox();
+            this.textBoxCBPrice = new System.Windows.Forms.TextBox();
+            this.textBoxCBstart = new System.Windows.Forms.TextBox();
+            this.textBoxCBName = new System.Windows.Forms.TextBox();
+            this.textBoxCBID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -234,7 +234,6 @@
             this.listViewDSSP.TabIndex = 7;
             this.listViewDSSP.UseCompatibleStateImageBehavior = false;
             this.listViewDSSP.View = System.Windows.Forms.View.Details;
-            this.listViewDSSP.SelectedIndexChanged += new System.EventHandler(this.listViewDSSP_SelectedIndexChanged);
             this.listViewDSSP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.thongTinSP);
             // 
             // id
@@ -516,17 +515,17 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textBoxCBend);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.buttonAddCombo);
             this.panel2.Controls.Add(this.buttonDelCombo);
             this.panel2.Controls.Add(this.buttonUpCombo);
             this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.discount);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox6);
+            this.panel2.Controls.Add(this.discountCB);
+            this.panel2.Controls.Add(this.textBoxCBPrice);
+            this.panel2.Controls.Add(this.textBoxCBstart);
+            this.panel2.Controls.Add(this.textBoxCBName);
+            this.panel2.Controls.Add(this.textBoxCBID);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
@@ -540,14 +539,14 @@
             this.panel2.Size = new System.Drawing.Size(361, 457);
             this.panel2.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxCBend
             // 
-            this.textBox2.Location = new System.Drawing.Point(149, 229);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(197, 25);
-            this.textBox2.TabIndex = 22;
+            this.textBoxCBend.Location = new System.Drawing.Point(149, 229);
+            this.textBoxCBend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCBend.Multiline = true;
+            this.textBoxCBend.Name = "textBoxCBend";
+            this.textBoxCBend.Size = new System.Drawing.Size(197, 25);
+            this.textBoxCBend.TabIndex = 22;
             // 
             // label3
             // 
@@ -578,6 +577,7 @@
             this.buttonDelCombo.TabIndex = 18;
             this.buttonDelCombo.Text = "Xóa";
             this.buttonDelCombo.UseVisualStyleBackColor = true;
+            this.buttonDelCombo.Click += new System.EventHandler(this.xoaCombo);
             // 
             // buttonUpCombo
             // 
@@ -588,6 +588,7 @@
             this.buttonUpCombo.TabIndex = 17;
             this.buttonUpCombo.Text = "Sửa";
             this.buttonUpCombo.UseVisualStyleBackColor = true;
+            this.buttonUpCombo.Click += new System.EventHandler(this.suaCombo);
             // 
             // comboBox1
             // 
@@ -599,46 +600,46 @@
             this.comboBox1.Size = new System.Drawing.Size(199, 24);
             this.comboBox1.TabIndex = 16;
             // 
-            // discount
+            // discountCB
             // 
-            this.discount.Location = new System.Drawing.Point(149, 297);
-            this.discount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.discount.Name = "discount";
-            this.discount.Size = new System.Drawing.Size(199, 22);
-            this.discount.TabIndex = 15;
+            this.discountCB.Location = new System.Drawing.Point(149, 297);
+            this.discountCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.discountCB.Name = "discountCB";
+            this.discountCB.Size = new System.Drawing.Size(199, 22);
+            this.discountCB.TabIndex = 15;
             // 
-            // textBox3
+            // textBoxCBPrice
             // 
-            this.textBox3.Location = new System.Drawing.Point(148, 271);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 22);
-            this.textBox3.TabIndex = 15;
+            this.textBoxCBPrice.Location = new System.Drawing.Point(148, 271);
+            this.textBoxCBPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCBPrice.Name = "textBoxCBPrice";
+            this.textBoxCBPrice.Size = new System.Drawing.Size(199, 22);
+            this.textBoxCBPrice.TabIndex = 15;
             // 
-            // textBox4
+            // textBoxCBstart
             // 
-            this.textBox4.Location = new System.Drawing.Point(148, 194);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(198, 22);
-            this.textBox4.TabIndex = 14;
+            this.textBoxCBstart.Location = new System.Drawing.Point(148, 194);
+            this.textBoxCBstart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCBstart.Name = "textBoxCBstart";
+            this.textBoxCBstart.Size = new System.Drawing.Size(198, 22);
+            this.textBoxCBstart.TabIndex = 14;
             // 
-            // textBox5
+            // textBoxCBName
             // 
-            this.textBox5.Location = new System.Drawing.Point(147, 121);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(198, 22);
-            this.textBox5.TabIndex = 12;
+            this.textBoxCBName.Location = new System.Drawing.Point(147, 121);
+            this.textBoxCBName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCBName.Name = "textBoxCBName";
+            this.textBoxCBName.Size = new System.Drawing.Size(198, 22);
+            this.textBoxCBName.TabIndex = 12;
             // 
-            // textBox6
+            // textBoxCBID
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(148, 86);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(198, 22);
-            this.textBox6.TabIndex = 11;
+            this.textBoxCBID.Enabled = false;
+            this.textBoxCBID.Location = new System.Drawing.Point(148, 86);
+            this.textBoxCBID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCBID.Name = "textBoxCBID";
+            this.textBoxCBID.Size = new System.Drawing.Size(198, 22);
+            this.textBoxCBID.TabIndex = 11;
             // 
             // label2
             // 
@@ -739,6 +740,7 @@
             this.listViewCombo.TabIndex = 7;
             this.listViewCombo.UseCompatibleStateImageBehavior = false;
             this.listViewCombo.View = System.Windows.Forms.View.Details;
+            this.listViewCombo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.thongtinCombo);
             // 
             // columnHeader1
             // 
@@ -1613,16 +1615,16 @@
         private System.Windows.Forms.Label labelIDChiTietHD;
         private System.Windows.Forms.Label labelCombo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxCBend;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonAddCombo;
         private System.Windows.Forms.Button buttonDelCombo;
         private System.Windows.Forms.Button buttonUpCombo;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxCBPrice;
+        private System.Windows.Forms.TextBox textBoxCBstart;
+        private System.Windows.Forms.TextBox textBoxCBName;
+        private System.Windows.Forms.TextBox textBoxCBID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -1642,7 +1644,7 @@
         private System.Windows.Forms.Label labelCombo2;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.TextBox discount;
+        private System.Windows.Forms.TextBox discountCB;
         private System.Windows.Forms.Label label2;
     }
 }

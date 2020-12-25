@@ -31,3 +31,14 @@ D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\BUS\obj\Debug\BUS.csproj.CoreC
 D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\BUS\obj\Debug\BUS.dll
 D:\IT\MoHinhPhanLop\BaiTapLan3\AdminBanHangDienTu\BUS\obj\Debug\BUS.pdb
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\bin\Debug\BUS.dll
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\bin\Debug\BUS.pdb
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\bin\Debug\DAL.dll
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\bin\Debug\DTO.dll
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\bin\Debug\DAL.pdb
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\bin\Debug\DTO.pdb
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.dll
+C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.pdb
