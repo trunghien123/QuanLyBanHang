@@ -62,12 +62,15 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageCombo = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonSubtract = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.listBoxListCurrent = new System.Windows.Forms.ListBox();
+            this.listBoxListAll = new System.Windows.Forms.ListBox();
             this.textBoxCBend = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonAddCombo = new System.Windows.Forms.Button();
             this.buttonDelCombo = new System.Windows.Forms.Button();
             this.buttonUpCombo = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.discountCB = new System.Windows.Forms.TextBox();
             this.textBoxCBPrice = new System.Windows.Forms.TextBox();
             this.textBoxCBstart = new System.Windows.Forms.TextBox();
@@ -183,7 +186,7 @@
             this.tabPageCatalog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageCatalog.Name = "tabPageCatalog";
             this.tabPageCatalog.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageCatalog.Size = new System.Drawing.Size(1036, 535);
+            this.tabPageCatalog.Size = new System.Drawing.Size(1036, 576);
             this.tabPageCatalog.TabIndex = 1;
             this.tabPageCatalog.Text = "Catalog";
             this.tabPageCatalog.UseVisualStyleBackColor = true;
@@ -197,7 +200,7 @@
             this.tabPageDSSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageDSSP.Name = "tabPageDSSP";
             this.tabPageDSSP.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageDSSP.Size = new System.Drawing.Size(1036, 535);
+            this.tabPageDSSP.Size = new System.Drawing.Size(1036, 576);
             this.tabPageDSSP.TabIndex = 0;
             this.tabPageDSSP.Text = "Sản Phẩm";
             this.tabPageDSSP.UseVisualStyleBackColor = true;
@@ -495,7 +498,7 @@
             this.tabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1044, 564);
+            this.tabControl.Size = new System.Drawing.Size(1044, 605);
             this.tabControl.TabIndex = 0;
             // 
             // tabPageCombo
@@ -507,7 +510,7 @@
             this.tabPageCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageCombo.Name = "tabPageCombo";
             this.tabPageCombo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageCombo.Size = new System.Drawing.Size(1036, 535);
+            this.tabPageCombo.Size = new System.Drawing.Size(1036, 576);
             this.tabPageCombo.TabIndex = 2;
             this.tabPageCombo.Text = "Combo";
             this.tabPageCombo.UseVisualStyleBackColor = true;
@@ -515,12 +518,15 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.buttonSubtract);
+            this.panel2.Controls.Add(this.buttonAdd);
+            this.panel2.Controls.Add(this.listBoxListCurrent);
+            this.panel2.Controls.Add(this.listBoxListAll);
             this.panel2.Controls.Add(this.textBoxCBend);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.buttonAddCombo);
             this.panel2.Controls.Add(this.buttonDelCombo);
             this.panel2.Controls.Add(this.buttonUpCombo);
-            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.discountCB);
             this.panel2.Controls.Add(this.textBoxCBPrice);
             this.panel2.Controls.Add(this.textBoxCBstart);
@@ -536,12 +542,50 @@
             this.panel2.Location = new System.Drawing.Point(664, 67);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(361, 457);
+            this.panel2.Size = new System.Drawing.Size(361, 505);
             this.panel2.TabIndex = 5;
+            // 
+            // buttonSubtract
+            // 
+            this.buttonSubtract.Location = new System.Drawing.Point(244, 176);
+            this.buttonSubtract.Name = "buttonSubtract";
+            this.buttonSubtract.Size = new System.Drawing.Size(75, 23);
+            this.buttonSubtract.TabIndex = 26;
+            this.buttonSubtract.Text = "Xóa";
+            this.buttonSubtract.UseVisualStyleBackColor = true;
+            this.buttonSubtract.Click += new System.EventHandler(this.substractProductList);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(145, 176);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 26;
+            this.buttonAdd.Text = "Thêm";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.AddProductList);
+            // 
+            // listBoxListCurrent
+            // 
+            this.listBoxListCurrent.FormattingEnabled = true;
+            this.listBoxListCurrent.ItemHeight = 16;
+            this.listBoxListCurrent.Location = new System.Drawing.Point(149, 203);
+            this.listBoxListCurrent.Name = "listBoxListCurrent";
+            this.listBoxListCurrent.Size = new System.Drawing.Size(194, 52);
+            this.listBoxListCurrent.TabIndex = 25;
+            // 
+            // listBoxListAll
+            // 
+            this.listBoxListAll.FormattingEnabled = true;
+            this.listBoxListAll.ItemHeight = 16;
+            this.listBoxListAll.Location = new System.Drawing.Point(145, 117);
+            this.listBoxListAll.Name = "listBoxListAll";
+            this.listBoxListAll.Size = new System.Drawing.Size(198, 52);
+            this.listBoxListAll.TabIndex = 24;
             // 
             // textBoxCBend
             // 
-            this.textBoxCBend.Location = new System.Drawing.Point(149, 229);
+            this.textBoxCBend.Location = new System.Drawing.Point(148, 292);
             this.textBoxCBend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCBend.Multiline = true;
             this.textBoxCBend.Name = "textBoxCBend";
@@ -550,7 +594,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(3, 231);
+            this.label3.Location = new System.Drawing.Point(3, 299);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 18);
             this.label3.TabIndex = 21;
@@ -559,7 +603,7 @@
             // 
             // buttonAddCombo
             // 
-            this.buttonAddCombo.Location = new System.Drawing.Point(124, 394);
+            this.buttonAddCombo.Location = new System.Drawing.Point(123, 454);
             this.buttonAddCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAddCombo.Name = "buttonAddCombo";
             this.buttonAddCombo.Size = new System.Drawing.Size(148, 31);
@@ -570,7 +614,7 @@
             // 
             // buttonDelCombo
             // 
-            this.buttonDelCombo.Location = new System.Drawing.Point(76, 340);
+            this.buttonDelCombo.Location = new System.Drawing.Point(63, 400);
             this.buttonDelCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDelCombo.Name = "buttonDelCombo";
             this.buttonDelCombo.Size = new System.Drawing.Size(92, 31);
@@ -581,7 +625,7 @@
             // 
             // buttonUpCombo
             // 
-            this.buttonUpCombo.Location = new System.Drawing.Point(216, 340);
+            this.buttonUpCombo.Location = new System.Drawing.Point(227, 400);
             this.buttonUpCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonUpCombo.Name = "buttonUpCombo";
             this.buttonUpCombo.Size = new System.Drawing.Size(92, 31);
@@ -590,19 +634,9 @@
             this.buttonUpCombo.UseVisualStyleBackColor = true;
             this.buttonUpCombo.Click += new System.EventHandler(this.suaCombo);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(147, 158);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 24);
-            this.comboBox1.TabIndex = 16;
-            // 
             // discountCB
             // 
-            this.discountCB.Location = new System.Drawing.Point(149, 297);
+            this.discountCB.Location = new System.Drawing.Point(149, 354);
             this.discountCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.discountCB.Name = "discountCB";
             this.discountCB.Size = new System.Drawing.Size(199, 22);
@@ -610,7 +644,7 @@
             // 
             // textBoxCBPrice
             // 
-            this.textBoxCBPrice.Location = new System.Drawing.Point(148, 271);
+            this.textBoxCBPrice.Location = new System.Drawing.Point(149, 323);
             this.textBoxCBPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCBPrice.Name = "textBoxCBPrice";
             this.textBoxCBPrice.Size = new System.Drawing.Size(199, 22);
@@ -618,7 +652,7 @@
             // 
             // textBoxCBstart
             // 
-            this.textBoxCBstart.Location = new System.Drawing.Point(148, 194);
+            this.textBoxCBstart.Location = new System.Drawing.Point(149, 265);
             this.textBoxCBstart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCBstart.Name = "textBoxCBstart";
             this.textBoxCBstart.Size = new System.Drawing.Size(198, 22);
@@ -626,7 +660,7 @@
             // 
             // textBoxCBName
             // 
-            this.textBoxCBName.Location = new System.Drawing.Point(147, 121);
+            this.textBoxCBName.Location = new System.Drawing.Point(145, 90);
             this.textBoxCBName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCBName.Name = "textBoxCBName";
             this.textBoxCBName.Size = new System.Drawing.Size(198, 22);
@@ -635,7 +669,7 @@
             // textBoxCBID
             // 
             this.textBoxCBID.Enabled = false;
-            this.textBoxCBID.Location = new System.Drawing.Point(148, 86);
+            this.textBoxCBID.Location = new System.Drawing.Point(145, 53);
             this.textBoxCBID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCBID.Name = "textBoxCBID";
             this.textBoxCBID.Size = new System.Drawing.Size(198, 22);
@@ -643,7 +677,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(-1, 297);
+            this.label2.Location = new System.Drawing.Point(-5, 358);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 18);
             this.label2.TabIndex = 10;
@@ -653,7 +687,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(1, 266);
+            this.label4.Location = new System.Drawing.Point(-4, 327);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(140, 18);
             this.label4.TabIndex = 10;
@@ -662,7 +696,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(2, 196);
+            this.label5.Location = new System.Drawing.Point(-1, 269);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 18);
             this.label5.TabIndex = 9;
@@ -671,16 +705,16 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(2, 159);
+            this.label6.Location = new System.Drawing.Point(45, 116);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 18);
+            this.label6.Size = new System.Drawing.Size(94, 39);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Catalog : ";
+            this.label6.Text = "Danh sách sản phẩm : ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(2, 122);
+            this.label7.Location = new System.Drawing.Point(3, 86);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(140, 18);
             this.label7.TabIndex = 7;
@@ -689,7 +723,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(3, 86);
+            this.label8.Location = new System.Drawing.Point(-1, 51);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(140, 18);
             this.label8.TabIndex = 6;
@@ -717,7 +751,7 @@
             this.panel1.Location = new System.Drawing.Point(6, 67);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(652, 464);
+            this.panel1.Size = new System.Drawing.Size(652, 505);
             this.panel1.TabIndex = 4;
             // 
             // listViewCombo
@@ -832,7 +866,7 @@
             this.tabPageHoaDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageHoaDon.Name = "tabPageHoaDon";
             this.tabPageHoaDon.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageHoaDon.Size = new System.Drawing.Size(1036, 535);
+            this.tabPageHoaDon.Size = new System.Drawing.Size(1036, 576);
             this.tabPageHoaDon.TabIndex = 3;
             this.tabPageHoaDon.Text = "Hóa đơn";
             this.tabPageHoaDon.UseVisualStyleBackColor = true;
@@ -1180,7 +1214,7 @@
             this.tabPageChiTietHD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageChiTietHD.Name = "tabPageChiTietHD";
             this.tabPageChiTietHD.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageChiTietHD.Size = new System.Drawing.Size(1036, 535);
+            this.tabPageChiTietHD.Size = new System.Drawing.Size(1036, 576);
             this.tabPageChiTietHD.TabIndex = 4;
             this.tabPageChiTietHD.Text = "Chi Tiết Hóa Đơn";
             this.tabPageChiTietHD.UseVisualStyleBackColor = true;
@@ -1479,7 +1513,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1067, 578);
+            this.ClientSize = new System.Drawing.Size(1067, 626);
             this.Controls.Add(this.tabControl);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
@@ -1620,7 +1654,6 @@
         private System.Windows.Forms.Button buttonAddCombo;
         private System.Windows.Forms.Button buttonDelCombo;
         private System.Windows.Forms.Button buttonUpCombo;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBoxCBPrice;
         private System.Windows.Forms.TextBox textBoxCBstart;
         private System.Windows.Forms.TextBox textBoxCBName;
@@ -1646,5 +1679,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.TextBox discountCB;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox listBoxListAll;
+        private System.Windows.Forms.Button buttonSubtract;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.ListBox listBoxListCurrent;
     }
 }

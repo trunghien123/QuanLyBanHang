@@ -66,6 +66,28 @@ namespace BUS
         {
             product.deleteSPwithId(id);
         }
+        //lay ten tat ca san pham
+        public String getAllProductName()
+        {
+            String productName = "";
+            DataTable dt = product.getAllProduct();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                productName = productName + (String)dt.Rows[i]["Product_Name"] + ";";
+            }
+            return productName;
+        }
+        //lay product id theo product name
+        public String getProductIdWithName(String productName)
+        {
+            String productID = "";
+            DataTable dt = product.getProductWithName(productName);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                productID = (String)dt.Rows[i]["ID"];
+            }
+            return productID;
+        }
 
         //thêm sản phẩm
         public void addSP(Product productDTO)

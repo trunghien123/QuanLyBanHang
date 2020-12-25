@@ -12,6 +12,7 @@ namespace BUS
     public class BUS_Combo
     {
         DAL_Combo combo = new DAL_Combo();
+        DAL_Product product = new DAL_Product();
 
         //lấy danh sách combo
         public List<Combo> getAllCombo()
@@ -64,8 +65,17 @@ namespace BUS
         public String getProductList(String id)
         {
             DataTable dt = combo.getComboWithId(id);
+            String listProductName = "";
 
-            return (String)dt.Rows[0]["product_list"];
+            String ProductId =  (String)dt.Rows[0]["product_list"];
+            String[] listProductId = ProductId.Split(';');
+            
+            for(int i = 0;i < listProductId.Length - 1; i++)
+            {
+                DataTable listProduct = product.getProductWithId(listProductId[i]);
+                listProductName = listProductName + (String)listProduct.Rows[0]["product_name"] + ";";
+            }
+            return listProductName;
         }
 
         //lấy giá combo theo id

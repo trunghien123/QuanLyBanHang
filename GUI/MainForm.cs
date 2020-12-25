@@ -141,7 +141,9 @@ namespace GUI
                 string[] arr = new string[7];
                 arr[0] = comboList[i].ID;
                 arr[1] = comboList[i].Combo_Name;
-                arr[2] = comboList[i].Product_List;
+                //arr[2] = comboList[i].Product_List;
+                String cb = combo.getProductList(comboList[i].ID);
+                arr[2] = cb;
                 arr[3] = comboList[i].StartDate;
                 arr[4] = comboList[i].EndDate;
                 arr[5] = comboList[i].ToTalMoney;
@@ -154,26 +156,64 @@ namespace GUI
         //setting thông tin combo
         private void thongtinCombo(object sender, MouseEventArgs e)
         {
+            listBoxListCurrent.Items.Clear();
+            listBoxListAll.Items.Clear();
+
             textBoxCBID.Text = listViewCombo.SelectedItems[0].SubItems[0].Text;
             textBoxCBName.Text = listViewCombo.SelectedItems[0].SubItems[1].Text;
             textBoxCBstart.Text = listViewCombo.SelectedItems[0].SubItems[3].Text;
             textBoxCBend.Text = listViewCombo.SelectedItems[0].SubItems[4].Text;
             textBoxCBPrice.Text = listViewCombo.SelectedItems[0].SubItems[5].Text;
             discountCB.Text = listViewCombo.SelectedItems[0].SubItems[6].Text;
+            String[] listProduct = listViewCombo.SelectedItems[0].SubItems[2].Text.Split(';');
+            for(int i = 0; i < listProduct.Length-1; i++)
+            {
+                listBoxListCurrent.Items.Add(listProduct[i]);
+            }
+            
+            BUS_Product product = new BUS_Product();
+            String[] listProductName = product.getAllProductName().Split(';');
+            for (int i = 0; i < listProductName.Length; i++)
+            {
+                listBoxListAll.Items.Add(listProductName[i]);
+            }
+        }
+
+        private void AddProductList(object sender, EventArgs e)
+        {
+            if (listBoxListCurrent.Items.Contains(listBoxListAll.SelectedItem))
+            {
+                MessageBox.Show("Sản phẩm đã tồn tại trong Combo");
+            }
+            else
+            {
+                MessageBox.Show("Thêm sản phẩm vào Combo thành công");
+                listBoxListCurrent.Items.Add(listBoxListAll.SelectedItem);
+            }
+        }
+        private void substractProductList(object sender, EventArgs e)
+        {
+            listBoxListCurrent.Items.RemoveAt(listBoxListCurrent.SelectedIndex);
         }
 
 
         private void suaCombo(object sender, EventArgs e)
         {
+            BUS_Product product = new BUS_Product();
+            String productList = null;
+            for(int i = 0; i< listBoxListCurrent.Items.Count; i++)
+            {
+                productList += product.getProductIdWithName( listBoxListCurrent.Items[i].ToString()) + ';';
+            }
             if(!textBoxCBID.Text.Equals("") && !textBoxCBName.Text.Equals("") && !textBoxCBstart.Text.Equals("") && !textBoxCBend.Text.Equals("") && !textBoxCBPrice.Text.Equals("") && !discountCB.Text.Equals(""))
             {
-                BUS_Combo combo = new BUS_Combo();
-                double discountMoneyInt = Int32.Parse(textBoxCBPrice.Text) - (Int32.Parse(textBoxCBPrice.Text) * Int32.Parse(discountCB.Text)) / 100;
-                string discountMoney = discountMoneyInt.ToString();
-                Combo comboDTO = new Combo(textBoxCBID.Text, textBoxCBName.Text,"", textBoxCBstart.Text, textBoxCBend.Text, textBoxCBPrice.Text, discountCB.Text, discountMoney);
-                combo.updateCombo(comboDTO);
+                 BUS_Combo combo = new BUS_Combo();
+                 double discountMoneyInt = Int32.Parse(textBoxCBPrice.Text) - (Int32.Parse(textBoxCBPrice.Text) * Int32.Parse(discountCB.Text)) / 100;
+                 string discountMoney = discountMoneyInt.ToString();
+                 Combo comboDTO = new Combo(textBoxCBID.Text, textBoxCBName.Text,productList, textBoxCBstart.Text, textBoxCBend.Text, textBoxCBPrice.Text, discountCB.Text, discountMoney);
+                 combo.updateCombo(comboDTO);
 
-                setting_DSCB();
+                 setting_DSCB();
             }
         }
 
@@ -475,7 +515,12 @@ namespace GUI
             
         }
 
-        
+       
+
+
+
+
+
 
 
 

@@ -58,6 +58,21 @@ namespace DAL
                 return null;
             }
         }
+        //lay ten tat ca san pham
+        public DataTable getProductWithName(String name)
+        {
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter("select * from product where product_name like '" + name +"'", con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+            }
+        }
 
         //update sản phẩm
         public void updateSP(Product product)
