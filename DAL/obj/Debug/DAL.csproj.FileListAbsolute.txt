@@ -34,3 +34,10 @@ C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.csproj.CoreCompileIn
 C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.dll
 C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.pdb
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\DAL\bin\Debug\DAL.dll
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\DAL\bin\Debug\DAL.pdb
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\DAL\bin\Debug\DTO.dll
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\DAL\bin\Debug\DTO.pdb
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.dll
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\DAL\obj\Debug\DAL.pdb

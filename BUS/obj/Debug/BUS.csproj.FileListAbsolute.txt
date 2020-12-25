@@ -42,3 +42,12 @@ C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.csproj.CoreCompileIn
 C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.dll
 C:\Users\AMIT GROUP\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.pdb
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\BUS\bin\Debug\BUS.dll
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\BUS\bin\Debug\BUS.pdb
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\BUS\bin\Debug\DAL.dll
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\BUS\bin\Debug\DTO.dll
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\BUS\bin\Debug\DAL.pdb
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\BUS\bin\Debug\DTO.pdb
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.dll
+C:\Users\Trung Hien\Desktop\QuanLyBanHang\BUS\obj\Debug\BUS.pdb

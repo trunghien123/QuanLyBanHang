@@ -60,6 +60,12 @@
     <Compile Include="ThemChiTietHoaDonForm.Designer.cs">
       <DependentUpon>ThemChiTietHoaDonForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemComboForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemComboForm.Designer.cs">
+      <DependentUpon>ThemComboForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemHoaDonForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="ThemChiTietHoaDonForm.resx">
       <DependentUpon>ThemChiTietHoaDonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemComboForm.resx">
+      <DependentUpon>ThemComboForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemHoaDonForm.resx">
       <DependentUpon>ThemHoaDonForm.cs</DependentUpon>

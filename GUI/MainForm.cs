@@ -512,7 +512,9 @@ namespace GUI
 
         private void buttonAddCombo_Click(object sender, EventArgs e)
         {
-            
+            ThemComboForm themCBForm = new ThemComboForm();
+            themCBForm.formCalled = this;
+            themCBForm.Show();
         }
 
        
